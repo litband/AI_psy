@@ -1,0 +1,73 @@
+/* Токены и базовые стили. Светлая тема по умолчанию, тёмная — по системной настройке. */
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --text: #1c2030;
+  --muted: #5d6478;
+  --border: #dde1ec;
+  --primary: #3b5bdb;
+  --primary-text: #ffffff;
+  --primary-soft: #e7ecff;
+  --yes: #2f9e44;
+  --no: #c2410c;
+  --zone-tendency: rgba(240, 160, 0, 0.14);
+  --zone-accent: rgba(224, 49, 49, 0.14);
+  --level-norm: #5d6478;
+  --level-tendency: #b36b00;
+  --level-accent: #c92a2a;
+  --radius: 14px;
+  --shadow: 0 1px 3px rgba(20, 30, 60, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12141c;
+    --surface: #1c2030;
+    --text: #eceef6;
+    --muted: #a0a7bd;
+    --border: #2f3548;
+    --primary: #7c93ff;
+    --primary-text: #0e1220;
+    --primary-soft: #262d4d;
+    --yes: #51cf66;
+    --no: #ff922b;
+    --zone-tendency: rgba(255, 192, 60, 0.14);
+    --zone-accent: rgba(255, 107, 107, 0.16);
+    --level-norm: #a0a7bd;
+    --level-tendency: #ffc53d;
+    --level-accent: #ff8787;
+    --shadow: none;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 12px; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 1.2em; }
+
+a { color: var(--primary); }
+
+.muted { color: var(--muted); }
+.noscript { padding: 16px; }
+
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }

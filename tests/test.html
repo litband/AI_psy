@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тесты AI Psy</title>
+  <style>
+    :root { --bg: #ffffff; --fg: #1a1a1a; --ok: #1a7f37; --bad: #cf222e; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) { --bg: #0d1117; --fg: #e6edf3; --ok: #3fb950; --bad: #ff7b72; }
+    }
+    :root[data-theme="dark"] { --bg: #0d1117; --fg: #e6edf3; --ok: #3fb950; --bad: #ff7b72; }
+    body { background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; margin: 16px; }
+    #summary { font-weight: bold; margin-bottom: 12px; }
+    ul { list-style: none; padding: 0; margin: 0; font-family: ui-monospace, monospace; font-size: 14px; }
+    li { padding: 2px 0; }
+    li.pass { color: var(--ok); }
+    li.fail { color: var(--bad); }
+  </style>
+</head>
+<body>
+  <h1>Тесты</h1>
+  <div id="summary">Выполняется…</div>
+  <ul id="results"></ul>
+  <script type="module" src="scoring.test.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Печать: только результат (диаграмма и описания). */
+@media print {
+  :root {
+    --bg: #fff; --surface: #fff; --text: #000; --muted: #444; --border: #bbb;
+    --zone-tendency: rgba(240, 160, 0, 0.18); --zone-accent: rgba(224, 49, 49, 0.18);
+    --level-norm: #444; --level-tendency: #8a5300; --level-accent: #a61e1e;
+  }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  .app { max-width: none; padding: 0; }
+  .no-print, .btn, .btn-row, .link-row { display: none !important; }
+  .card { box-shadow: none; break-inside: avoid; }
+  .chart { max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+}
